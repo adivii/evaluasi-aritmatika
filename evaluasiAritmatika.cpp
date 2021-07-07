@@ -14,13 +14,13 @@ int main(){
 
 	getline(cin,input);
 	
-	vector<string> infix = convertToInfix(removeWhitespace);
+	vector<string> infix = convertToInfix(removeWhitespace(input));
 	vector<string> postfix = convertToPostfix(infix);
 	cout << evaluateOperation(postfix) << endl;
 }
 
 bool check(char ch, vector<char> range){
-    vector<char>::iterator it = find(range.begin(), range.end(), ch);;
+    vector<char>::iterator it = find(range.begin(), range.end(), ch);
 
     return it - range.begin() < (long int) range.size();
 }
