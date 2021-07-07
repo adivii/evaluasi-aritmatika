@@ -14,7 +14,7 @@ int main(){
 }
 
 bool check(char ch, vector<char> range){
-    vector<char>::iterator it = find(range.begin(),range.end(),ch);;
+    vector<char>::iterator it = find(range.begin(), range.end(), ch);;
 
     return it - range.begin() < (long int) range.size();
 }
