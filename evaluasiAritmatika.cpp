@@ -57,8 +57,8 @@ int checkPrecedence(string op){
 }
 
 vector<string> convertToPostfix(vector<string> infix){
-    vector<string> op = {"+","-","*","/","%"};
-    vector<string> kurung = {"(",")"};
+    vector<string> op = {"+", "-", "*", "/", "%"};
+    vector<string> kurung = {"(", ")"};
 
     vector<string>::iterator i = infix.begin();
 }
