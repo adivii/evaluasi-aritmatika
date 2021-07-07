@@ -12,9 +12,10 @@ double evaluateOperation(vector<string> postfix);
 int main(){
 	string input;
 	getline(cin,input);
-	vector<string> infix = convertToInfix(string input);
+	
+	vector<string> infix = convertToInfix(removeWhitespace);
 	vector<string> postfix = convertToPostfix(infix);
-	cout<<evaluateOperation(postfix);
+	cout<<evaluateOperation(postfix) << endl;
 
 }
 
