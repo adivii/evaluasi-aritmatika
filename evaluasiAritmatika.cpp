@@ -18,7 +18,20 @@ bool check(char ch, vector<char> range){
 }
 
 string removeWhitespace(string str){
+	vector<char> op = {'+','*','/','-','%','(',')'};
 
+	string::iterator i = str.begin();
+	string result;
+
+	while(i != str.end()){
+		if(isdigit(*i) || check(*i,op)){
+			result.push_back(*i);
+		}
+
+		i++;
+	}
+
+	return result;
 }
 
 vector<string> convertToInfix(string input){
