@@ -14,9 +14,8 @@ int main(){
 
 	getline(cin,input);
 	
-	vector<string> infix = convertToInfix(removeWhitespace(input));
+	vector<string> infix = convertToInfix(removeWhitespace);
 	vector<string> postfix = convertToPostfix(infix);
-	
 	cout << evaluateOperation(postfix) << endl;
 }
 
