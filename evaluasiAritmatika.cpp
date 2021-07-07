@@ -11,12 +11,12 @@ double evaluateOperation(vector<string> postfix);
 
 int main(){
 	string input;
+
 	getline(cin,input);
 	
 	vector<string> infix = convertToInfix(removeWhitespace);
 	vector<string> postfix = convertToPostfix(infix);
-	cout<<evaluateOperation(postfix) << endl;
-
+	cout << evaluateOperation(postfix) << endl;
 }
 
 bool check(char ch, vector<char> range){
