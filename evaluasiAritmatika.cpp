@@ -10,6 +10,11 @@ double doOperation(double a, double b, string op);
 double evaluateOperation(vector<string> postfix);
 
 int main(){
+	string input;
+	getline(cin,input);
+	vector<string> infix = convertToInfix(string input);
+	vector<string> postfix = convertToPostfix(infix);
+	cout<<evaluateOperation(postfix);
 
 }
 
