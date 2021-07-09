@@ -23,7 +23,7 @@ int main(){
 }
 
 bool check(char ch, vector<char> range){
-    vector<char>::iterator it = find(range.begin(), range.end(), ch);;
+    vector<char>::iterator it = find(range.begin(), range.end(), ch);
 
     return it - range.begin() < (long int) range.size();
 }
@@ -50,7 +50,8 @@ vector<string> convertToInfix(string input){
 }
 
 int checkPrecedence(string op){
-	int result;
+    int result;
+
     if(op == "%" || op == "*" || op == "/"){
         result = 2;
     }else if(op == "+" || op == "-"){
@@ -60,7 +61,10 @@ int checkPrecedence(string op){
 }
 
 vector<string> convertToPostfix(vector<string> infix){
+    vector<string> op = {"+", "-", "*", "/", "%"};
+    vector<string> kurung = {"(", ")"};
 
+    vector<string>::iterator i = infix.begin();
 }
 
 double evaluateOperation(vector<string> postfix){
