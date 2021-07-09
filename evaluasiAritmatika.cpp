@@ -48,6 +48,7 @@ vector<string> convertToInfix(string input){
 }
 
 int checkPrecedence(string op){
+    int result;
     if(op == "%" || op == "*" || op == "/"){
         result = 3;
     }else if(op == "+" || op == "-"){
@@ -56,7 +57,10 @@ int checkPrecedence(string op){
 }
 
 vector<string> convertToPostfix(vector<string> infix){
+    vector<string> op = {"+", "-", "*", "/", "%"};
+    vector<string> kurung = {"(", ")"};
 
+    vector<string>::iterator i = infix.begin();
 }
 
 double evaluateOperation(vector<string> postfix){
