@@ -14,7 +14,9 @@ int main(){
 	getline(cin,input);
 	
 	vector<string> infix = convertToInfix(removeWhitespace(input));
+	
 	vector<string> postfix = convertToPostfix(infix);
+	
 	cout << evaluateOperation(postfix) << endl;
 	
 	return 0;
@@ -49,11 +51,13 @@ vector<string> convertToInfix(string input){
 
 int checkPrecedence(string op){
     int result;
+
     if(op == "%" || op == "*" || op == "/"){
-        result = 3;
+        result = 2;
     }else if(op == "+" || op == "-"){
         result = 4;
     }
+    return result;
 }
 
 vector<string> convertToPostfix(vector<string> infix){
