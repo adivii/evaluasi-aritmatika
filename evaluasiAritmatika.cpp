@@ -1,3 +1,8 @@
+/*
+Adiwijaya Satria Nusantara
+Kayla Atsila Ivanka
+Muhammad Mufid Sadzili
+*/
 #include <bits/stdc++.h>
 using namespace std;
 
